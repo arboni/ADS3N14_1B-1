@@ -1,34 +1,42 @@
 package com.senac.estruturas;
 
 public class Nodo<T> {
-	
-	private T  dado;
+	private T data;
 	private Nodo<T> next;
-
-	public Nodo(T i)
+	private Nodo<T> prev;
+	
+	public Nodo()
 	{
-		dado = i;
+		data = null;
 		next = null;
 	}
-	
-	public void setData(T i)
-	{
-		dado = i;
-		next = null;
-	}
-	
-	public T getData()
-	{
-		return dado;
+
+	public Nodo(T chave) {
+		this.data = chave;
+		this.next = null;
 	}
 
-	public void setNext(Nodo<T> next)
-	{
+	public T getData() {
+		return data;
+	}
+
+	public void setData(T data) {
+		this.data = data;
+	}
+
+	public Nodo<T> getNext() {
+		return next;
+	}
+
+	public void setNext(Nodo<T> next) {
 		this.next = next;
 	}
-	
-	public Nodo<T> getNext()
-	{
-		return next;
+
+	public Nodo<T> getPrevious() {
+		return prev;
+	}
+
+	public void setPrevious(Nodo<T> prev) {
+		this.prev = prev;
 	}
 }
