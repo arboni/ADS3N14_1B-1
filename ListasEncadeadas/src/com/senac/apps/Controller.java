@@ -13,7 +13,7 @@ public class Controller {
 	public void iniciaLista() {
 		for (int i = 0; i < 50; ++i) {
 			Nodo<Integer> novo = new Nodo<Integer>();
-			novo.setChave((int)(Math.random() * 10000));
+			novo.setData((int)(Math.random() * 10000));
 			lista.insert(novo);
 		}
 	}
@@ -21,7 +21,7 @@ public class Controller {
 	public void imprimeLista() {
 		Nodo<Integer> nodo = lista.getHead();
 		while (nodo != null) {
-			view.imprimeInteiro(nodo.getChave());
+			view.imprimeInteiro(nodo.getData());
 			nodo = nodo.getNext();
 		}
 	}
